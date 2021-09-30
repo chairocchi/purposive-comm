@@ -1,0 +1,171 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ] */
+
+@font-face {
+	font-family: BloggerSans;
+	src: url(fonts/Blogger-sans/Blogger_Sans.otf); 
+}
+
+@font-face {
+	font-family: BloggerSans-Bold;
+	src: url(fonts/Blogger-sans/Blogger_Sans-Bold.otf); 
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: BloggerSans;
+	padding: 10px;
+	background: #ffffff;/*#56A3A6;*/
+}
+
+p {
+	font-size: 17px;
+}
+
+/* Blog Title */
+.header {
+	padding: 30px;
+	text-align: center;
+	background: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*shadow card*/
+}
+
+.header h1 {
+	font-size: 60px;
+	font-family: BloggerSans-Bold;
+}
+
+.titlee {
+	display: flex;
+	align-items:center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+	overflow: hidden;
+	background-color: #084C61;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*shadow card*/
+}
+
+/* Style the topnav links */
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+/*=====================================*/
+/* Active class */
+.active {
+	background-color: #E3B505;
+}
+
+.activecolor {
+	color: #3266a8; /*text*/
+}
+
+/* Change color on hover */
+.topnav a:hover:not(.active) {
+	background-color: #E3B505;
+	color: #3266a8; /*text*/
+}
+/*=====================================*/
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+	float: left;
+	width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+	float: left;
+	width: 25%;
+	padding-left: 20px;
+}
+
+pan{
+	margin-right: auto;
+	display: block;
+}
+
+img {
+	display:block;
+    margin:auto;
+	height: 500px;
+}
+
+/* Image link */
+figure {
+	height: 100px;
+	width: 250px;
+	padding: 0;
+	overflow: hidden;
+	margin: 0;
+}
+
+/* Image hover zoom */
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/* Back image */
+.backimg {
+	width: 100%;
+	padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*shadow card*/
+	border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%; /* border */
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Footer */
+.footer {
+	text-align: center;
+	font-size: 10px;
+	margin-top: 50px;
+	padding: 1px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+	.leftcolumn, .rightcolumn {   
+		width: 100%;
+		padding: 0;
+	}
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+}
